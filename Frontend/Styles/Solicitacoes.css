@@ -1,0 +1,29 @@
+
+/* Área principal */
+.conteudo {
+    flex: 1;
+    padding: 40px;
+}
+
+.conteudo h1 {
+    font-size: 60px;
+    font-weight: normal;
+}
+
+.pesq-filtro{
+    width: 80%;
+    background-color: #ae2323;
+    border-right: 1px solid #ccc;
+    display: flex;
+    padding: 15px 15px;
+    margin: 60px auto 0;
+    border-radius: 50px;
+}
+
+.pesquisar{
+    flex: 1;
+}
+
+.filtro{
+    width: 100px;
+}
