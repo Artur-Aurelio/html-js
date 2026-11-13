@@ -5,10 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="../Styles/sidebar.css">
+    <link rel="stylesheet" href="../Styles/comum.css">
+    <link rel="stylesheet" href="../Styles/CadastroSolic.css">
 </head>
 <body>
     <div id="sidebar-container"></div>
 
+    <main class="conteudo">
+        <h1>Nova Solicitação</h1>
+        <p>Preencha os campos abaixo para registrar uma nova solicitação.</p>
+
+        <form class="form-solicitacao">
+
+            <!-- Inserir o Título -->
+            <div class="campo">
+                <label for="titulo">Título da solicitação</label>
+                <input
+                    type="text"
+                    id="titulo"
+                    name="titulo"
+                    placeholder="Digite o título da solicitação"
+                    required
+                >
+            </div>
+
+            <!-- Inserir a Prioridade -->
+            <div class="campo">
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade" name="prioridade" required>
+                    <option value="">Selecione a prioridade</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+
+            <!-- Inserir a Categoria, mas definindo algumas-->
+            <div class="campo">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="ti">TI</option>
+                    <option value="infraestrutura">Infraestrutura</option>
+                    <option value="rh">RH</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <!-- Inserir a Descrição -->
+            <div class="campo">
+                <label for="descricao">Descrição</label>
+                <textarea
+                    id="descricao"
+                    name="descricao"
+                    rows="5"
+                    placeholder="Descreva sua solicitação..."
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Botões para Enviar e Limpar-->
+            <div class="botoes-formulario">
+                <button type="reset" class="btn-cancelar">Limpar</button>
+                <button type="submit" class="btn-cadastrar">Cadastrar solicitação</button>
+            </div>
+
+        </form>
+
+    </main>
+
     <script src="../Js/sidebar.js"></script>
+    <script src="../Js/cadastro.js"></script>
 </body>
 </html>
